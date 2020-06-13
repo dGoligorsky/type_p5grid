@@ -20,7 +20,7 @@ function setup() {
 function draw() {
   background(0, 0, 200, 100);
 
-  const gridNumber = 50;
+  const gridNumber = 70;
   const tileSize = 600 / gridNumber;
 
   for (let x = 0; x < gridNumber; x++) {
@@ -30,8 +30,8 @@ function draw() {
       // source
       const sx = x * tileSize + distortion * 0.1 + (distortion * mouseX) / 1000;
       const sy = y * tileSize + distortion * 0.1 + (distortion * mouseY) / 1000;
-      const sw = tileSize;
-      const sh = tileSize;
+      const sw = tileSize + distortion * 0.1 + (distortion * mouseX) / 1000;
+      const sh = tileSize + distortion * 0.1 + (distortion * mouseY) / 1000;
 
       // destination
       const dx = x * tileSize;
